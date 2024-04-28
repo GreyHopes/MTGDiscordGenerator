@@ -9,8 +9,8 @@
   color: white;
 }
 
-.App>* {
-  margin-top: 16px !important;
+.App>button {
+  margin-top: 32px !important;
 }
 
 .card-container {
@@ -20,7 +20,7 @@
 }
 
 .card-container>* {
-  margin-top: 16px !important;
+  margin-top: 32px !important;
 }
 
 .oracle {
