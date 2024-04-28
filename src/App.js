@@ -1,5 +1,5 @@
 import './App.css';
-import Card from './Card';
+import Card from './Card/Card';
 import Button from '@mui/material/Button';
 import * as Scry from "scryfall-sdk";
 import { useState } from 'react';
@@ -8,7 +8,7 @@ function App() {
   async function onGenerateButtonClicked() {
     setCard(null);
     console.log("Retrieving card...")
-    var card = await Scry.Cards.random("-t:land");
+    var card = await Scry.Cards.random("-t:land is:leveler");
     console.log(card)
     setCard(card);
   }

@@ -43,3 +43,43 @@ vanguard
 token
 double_faced_token
 emblem
+
+
+Whenever an opponent casts an instant or sorcery spell, they may pay {2}. If they don't, you may copy that spell. You may choose new targets for the copy.
+
+White (w) 
+Blue (u) 
+Black (b) 
+Red (r)  
+Green (g)  
+Colorless Mana (c) 
+Phyrexian Mana (p)  
+Snow Mana (s)  
+X (x)  
+0 (0)  
+1 (1) 
+2 (2) 
+3 (3)
+4 (4)
+5 (5)
+6 (6) 
+7 (7)
+8 (8)
+9 (9)
+10 (10)
+11 (11)  
+12 (12)  
+13 (13)  
+14 (14)  
+15 (15)  
+16 (16) 
+17 (17)  
+18 (18)  
+19 (19)  
+20 (20)  
+1/2 (1-2) 
+Infinity (infinity)  
+100 (100)      
+1,000,000 (1000000)  
+Energy (e)
+ Tap (tap)  Untap (untap)

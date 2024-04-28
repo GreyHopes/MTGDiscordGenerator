@@ -1,19 +1,19 @@
-import defaultImage from './../default.png'
+import defaultImage from './default.png'
 import Button from '@mui/material/Button';
 import { useState } from 'react';
 
-export default function FlipLayout({ card, width, height }) {
-    function onFlipClicked() {
-        setFlip(flip == false);
+export default function DoubleFacedLayout({ card, width, height }) {
+    function onTransform() {
+        setFace(-1 * face + 1)
     }
 
-    const [flip, setFlip] = useState(false);
+    const [face, setFace] = useState(0);
 
     return (
         <div className='card-container'>
             <img
-                className={`card ${flip ? "card-flipped" : ""}`}
-                src={card !== null ? card.getImageURI("png") : defaultImage}
+                className={`card`}
+                src={card !== null ? card.card_faces[face].getImageURI("png") : defaultImage}
                 alt=""
                 width={width}
                 height={height}
@@ -22,8 +22,8 @@ export default function FlipLayout({ card, width, height }) {
                 variant="contained"
                 size='large'
                 color="secondary"
-                onClick={onFlipClicked}>
-                Flip
+                onClick={onTransform}>
+                Transform
             </Button>
         </div>
 

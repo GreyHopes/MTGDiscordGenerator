@@ -1,4 +1,4 @@
-import defaultImage from './../default.png'
+import defaultImage from './default.png'
 
 export default function DefaultLayout({ card, width, height }) {
     let rotate = false;

@@ -1,8 +1,10 @@
 import DefaultLayout from "./CardLayouts/DefaultLayout";
 import FlipLayout from "./CardLayouts/FlipLayout";
 import DoubleFacedLayout from "./CardLayouts/DoubleFacedLayout";
+import CardOracleElement from "./CardOracleElement";
 
-export default function Card({ card, width, height }) {
+
+function getCardLayout(card, width, height) {
     if (card?.layout == "flip") {
         return (
             <FlipLayout
@@ -32,5 +34,16 @@ export default function Card({ card, width, height }) {
             width={width}
             height={height}
         />
+    );
+}
+
+
+export default function Card({ card, width, height }) {
+    return (
+        <div className='card-container'>
+            {getCardLayout(card, width, height)}
+            <CardOracleElement card={card}></CardOracleElement>
+        </div>
+
     );
 }

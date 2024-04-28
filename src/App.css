@@ -23,6 +23,15 @@
   margin-top: 16px !important;
 }
 
+.oracle {
+  background-color: #565c68;
+  padding: 0px 16px;
+  margin: 0px 16px;
+  margin-bottom: 16px;
+  border-radius: 4.75% / 3.5%;
+  text-align: justify;
+}
+
 .card-container {
   display: flex;
   flex-direction: column;
