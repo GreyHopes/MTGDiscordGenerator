@@ -1,0 +1,45 @@
+normal 
+leveler
+class
+case
+saga
+mutate
+augment
+host
+    Retrieve everything from base data
+
+adventure
+    Retrieve image from image_uri
+    Retrieve oracle, cost, type from faces
+
+split
+planar
+    Retrieve image from image_uri
+    Rotate by default
+    Retrieve oracle, cost, type from faces
+
+
+flip
+    Retrieve image from image_uri
+    Add vertical rotate button
+    Retrieve oracle, cost, type from faces
+
+transform
+modal_dfc
+battle
+    Retrieve image from current face 
+    Add transform button 
+    Retrieve oracle, cost, type from faces
+    If battle add rotate button
+
+reversible_card
+    Add transform button 
+    Retrieve oracle from card_faces[0]
+
+meld
+
+scheme
+vanguard
+token
+double_faced_token
+emblem

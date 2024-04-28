@@ -1,0 +1,37 @@
+normal 
+leveler
+class
+case
+saga
+mutate
+augment
+host
+adventure
+    Retrieve image from image_uri
+
+split
+planar
+    Retrieve image from image_uri
+    Rotate by default
+
+flip
+    Retrieve image from image_uri
+    Add vertical rotate button
+
+transform
+modal_dfc
+reversible_card
+battle
+    Retrieve image from current face 
+    Add transform button 
+
+meld
+    Add transform button 
+    Add rotate button
+
+
+scheme
+vanguard
+token
+double_faced_token
+emblem
