@@ -1,3 +1,5 @@
+import parse from 'html-react-parser';
+
 function retrieveCardFaces(card) {
     switch (card.layout) {
         case "adventure":
@@ -27,7 +29,30 @@ function retrieveCardFaces(card) {
 }
 
 function formatSymbols(text) {
-    return text;
+    var matches = text.match(/{(.)(\/(.))?}/g);
+
+    if (!(matches)) {
+        return text;
+    }
+
+    matches.forEach(function (symbol) {
+        if (symbol == "{CHAOS}" || symbol == "{TK}" || symbol == "{PW}") {
+            return;
+        }
+
+        var key = symbol.slice(1, -1)
+            .replace('/', '')
+            .replace('T', "tap")
+            .replace('Q', "untap")
+            .toLowerCase();
+
+        text = text.replace(
+            symbol,
+            `<i class="ms ms-${key} ms-cost ms-shadow"></i>`
+        );
+    });
+
+    return parse(text);
 }
 
 function retrieveTypedData(face) {
@@ -45,13 +70,16 @@ function retrieveTypedData(face) {
 }
 
 function formatOracleText(text) {
-    let splits = text.split("\n");
+    if (typeof text.split == "undefined") {
+        console.log(text)
+        return text;
+    }
 
-    console.log(splits)
+    let splits = text.split("\n");
 
     return (
         splits.map((split, i) => {
-            return (<p key={i}>{split}</p>)
+            return (<p key={i}>{formatSymbols(split)}</p>)
         })
     )
 }
@@ -66,11 +94,11 @@ export default function CardOracleElement({ card }) {
     return (
         faces.map((face, i) => {
             return (
-                <div key={face.name} className="oracle">
+                <div key={i} className="oracle">
                     <p>{face.name} {formatSymbols(face.mana_cost)}</p>
                     <p>{face.type_line}</p>
                     <p>{retrieveTypedData(face)}</p>
-                    {formatOracleText(formatSymbols(face.oracle_text))}
+                    {formatOracleText(face.oracle_text)}
                 </div>
 
             )

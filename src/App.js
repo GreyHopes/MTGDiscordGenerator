@@ -8,7 +8,7 @@ function App() {
   async function onGenerateButtonClicked() {
     setCard(null);
     console.log("Retrieving card...")
-    var card = await Scry.Cards.random("-t:land is:leveler");
+    var card = await Scry.Cards.random("-t:land o:{T}");
     console.log(card)
     setCard(card);
   }
